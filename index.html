@@ -582,7 +582,7 @@
         <div class="background" style="background-image:url(assets/img/background/img-95.jpg)"></div>
    
         `;
-        let body = document.getElementsByTagName("BODY")[0]
+        let body = document.getElementById("form-container");
         new ClipboardJS('.copy-btn');
 
         function getAccess() {
@@ -590,13 +590,15 @@
             let pwd = document.getElementById("pwd");
 
             if (pwd.value == "0505") {
-                document.getElementById("form-container").remove();
-                var text = document.createElement('section');
-                text.classList.add("slide");
-                text.classList.add("fade-6");
-                text.classList.add("kenBurns");
-                text.innerHTML = content;
-                body.appendChild(text);
+
+
+                body.innerHTML = content;
+                body.style.zIndex = "0";
+
+
+
+
+
 
 
             } else {
